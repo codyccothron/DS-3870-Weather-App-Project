@@ -24,22 +24,63 @@
                     <p class="text-center"><span id="lblLow"></span> - <span id="lblHigh"></span></p>
                 </div>   
                 <div>
-                    <select type="text" class="form-control text-center" id="FavCourses" name="FavCourses">
-                            <option value="GoldenEagle">Golden Eagle Golf Club</option>
-                            <option value="WhitePlains">White Plains Golf and Country Club</option>
-                            <option value="SouthernHills">Southern Hills Golf Club</option>
-                            <option value="BearTrace">Bear Trace at Cumberland Mountain</option>
-                            <option value="Sparta">Sparta Golf and Country Club</option>
-                            </select>
+                    <select type="text" class="form-control" id="FavCourses" name="FavCourses">
+                            <option value="None">Please Select a Course</option>
+                            <option value="GoldenEagle" data-lat="36.1625" data-long="-85.4988">Golden Eagle Golf Club</option>
+                            <option value="WhitePlains"  data-lat="36.17670" data-long="-85.450156">White Plains Golf and Country Club</option>
+                            <option value="SouthernHills" data-lat="36.1550" data-long="-85.6364">Southern Hills Golf Club</option>
+                            <option value="BearTrace" data-lat="35.95" data-long="-85.03">Bear Trace at Cumberland Mountain</option>
+                        </select>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        Current Conditions
+    <div class="card">
+        <div class="d-flex justify-content-center mt-3">
+            <h4>Current Conditions</h4>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <h4>7-day Forecast</h4>
+        </div>
+        <div class="d-flex justify-content-center gap-5 mt-3">
+            <div class="card col-1 bg-primary text-white">
+                Today
+                <div class="d-flex justify-content-center">
+                    <span id='lblIcon-today' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <p id="txtDescription-today" class="fw-bold"></p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h1 class="ms-2" id="lblCurrentTemp-today"></h1>
+                </div>
+                <div>
+                    <p class="text-center"><span id="lblLow-today"></span> - <span id="lblHigh-today"></span></p>
+                </div>
+            </div>
+            <div class="card col-1 bg-primary text-white">
+                Tomorrow
+            </div>
+            <div class="card col-1 bg-primary text-white">
+                Day 3
+            </div>
+            <div class="card col-1 bg-primary text-white">
+                Day 4
+            </div>
+            <div class="card col-1 bg-primary text-white">
+                Day 5
+            </div>
+            <div class="card col-1 bg-primary text-white">
+                Day 6
+            </div>
+            <div class="card col-1 bg-primary text-white">
+                Day 7
+            </div>
+        </div>
+            
     </div>  
     
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
