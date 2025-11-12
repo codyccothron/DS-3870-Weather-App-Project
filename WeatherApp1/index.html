@@ -17,7 +17,7 @@
                 <div class="d-flex justify-content-center">
                     <p id="txtDescription" class="fw-bold"></p>
                 </div>
-                <div class="d-flex justify-content-center mt-5">
+                <div class="d-flex justify-content-center">
                     <h1 class="display-1 ms-2" id="lblCurrentTemp"></h1>
                 </div>
                 <div>
@@ -35,106 +35,130 @@
             </div>
         </div>
     </div>
-    <div class="card">
-        <div class="d-flex justify-content-center mt-3">
-            <h4>Current Conditions</h4>
+    <div class="card d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="card col-6 d-flex justify-content-center mt-3">
+                <h4 class="text-center mt-3">Current Conditions</h4>
+
+                <div class="d-flex mt-3 justify-content-center">
+                    <p><span id="txtHumidityPct"></span></p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p>Wind Speed: <span id="txtWindMPH"></span></p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p>Wind Gusts: <span id="txtWindGust"></span></p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p>Wind Direction: <span id="txtDirection"></span></p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p><span id="lblSunrise"></span> | <span id="lblSunset"></span></p>
+                </div>
+
+             </div>
         </div>
-        <div class="d-flex justify-content-center mt-3">
-            <h4>7-day Forecast</h4>
-        </div>
-        <div class="d-flex justify-content-center gap-5 mt-3 mb-3">
-            <div class="card d-flex col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Today</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-today' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-today" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-today"></span> - <span id="lblHigh-today"></span></p>
-                </div>
+        
+        <div class="card d-flex justify-content-center mt-3">
+            <div class="d-flex justify-content-center mt-3">
+                <h4>7-day Forecast</h4>
             </div>
+            <div class="d-flex justify-content-center gap-5 mt-3 mb-3">
+                <div class="card d-flex col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Today</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-today' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-today" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-today"></span> - <span id="lblHigh-today"></span></p>
+                    </div>
+                </div>
 
-            <div class="card col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Tomorrow</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-tomorrow' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                <div class="card col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Tomorrow</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-tomorrow' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-tomorrow" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-tomorrow"></span> - <span id="lblHigh-tomorrow"></span></p>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-tomorrow" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-tomorrow"></span> - <span id="lblHigh-tomorrow"></span></p>
-                </div>
-            </div>
 
-            <div class="card col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Day 3</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-day3' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                <div class="card col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Day 3</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-day3' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-day3" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-day3"></span> - <span id="lblHigh-day3"></span></p>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-day3" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-day3"></span> - <span id="lblHigh-day3"></span></p>
-                </div>
-            </div>
 
-            <div class="card col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Day 4</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-day4' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                <div class="card col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Day 4</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-day4' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-day4" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-day4"></span> - <span id="lblHigh-day4"></span></p>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-day4" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-day4"></span> - <span id="lblHigh-day4"></span></p>
-                </div>
-            </div>
 
-            <div class="card col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Day 5</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-day5' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                <div class="card col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Day 5</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-day5' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-day5" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-day5"></span> - <span id="lblHigh-day5"></span></p>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-day5" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-day5"></span> - <span id="lblHigh-day5"></span></p>
-                </div>
-            </div>
 
-            <div class="card col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Day 6</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-day6' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                <div class="card col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Day 6</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-day6' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-day6" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-day6"></span> - <span id="lblHigh-day6"></span></p>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-day6" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-day6"></span> - <span id="lblHigh-day6"></span></p>
-                </div>
-            </div>
 
-            <div class="card col-1 bg-primary text-white">
-                <h6 class="fw-bold mb-3 mt-2 text-center">Day 7</h6>
-                <div class="d-flex justify-content-center">
-                    <span id='lblIcon-day7' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <p id="txtDescription-day7" class="fw-bold"></p>
-                </div>
-                <div>
-                    <p class="text-center"><span id="lblLow-day7"></span> - <span id="lblHigh-day7"></span></p>
+                <div class="card col-1 bg-primary text-white">
+                    <h6 class="fw-bold mb-3 mt-2 text-center">Day 7</h6>
+                    <div class="d-flex justify-content-center">
+                        <span id='lblIcon-day7' style="font-size: 50px;"><i class="bi bi-brightness-high"></i></span>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p id="txtDescription-day7" class="fw-bold"></p>
+                    </div>
+                    <div>
+                        <p class="text-center"><span id="lblLow-day7"></span> - <span id="lblHigh-day7"></span></p>
+                    </div>
                 </div>
             </div>
-        </div>
-            
     </div>  
     
  

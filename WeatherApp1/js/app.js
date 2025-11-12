@@ -38,7 +38,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strCurrentWeatherCode)) {
                 document.querySelector('#lblIcon').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription').innerHTML = '<p id="txtDescription" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription').innerHTML = '<p id="txtDescription" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strCurrentWeatherCode)) {
@@ -58,7 +58,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempToday = objData.daily.temperature_2m_max[0] + '°'
         document.querySelector('#lblHigh-today').innerHTML = strMaxTempToday
  
-        let strWeatherCodeToday = objData.current.weather_code
+        let strWeatherCodeToday = objData.daily.weather_code[0]
             if([0].includes(strWeatherCodeToday)) {
                 document.querySelector('#lblIcon-today').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-today').innerHTML = '<p id="txtDescription-today" class="fw-bold">Clear Skies</p>'
@@ -71,7 +71,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeToday)) {
                 document.querySelector('#lblIcon-today').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-today').innerHTML = '<p id="txtDescription-today" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-today').innerHTML = '<p id="txtDescription-today" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeToday)) {
@@ -91,7 +91,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempTomorrow = objData.daily.temperature_2m_max[1] + '°'
         document.querySelector('#lblHigh-tomorrow').innerHTML = strMaxTempTomorrow
  
-        let strWeatherCodeTomorrow = objData.current.weather_code
+        let strWeatherCodeTomorrow = objData.daily.weather_code[1]
             if([0].includes(strWeatherCodeTomorrow)) {
                 document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Clear Skies</p>'
@@ -104,7 +104,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeTomorrow)) {
                 document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeTomorrow)) {
@@ -124,7 +124,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempDay3 = objData.daily.temperature_2m_max[2] + '°'
         document.querySelector('#lblHigh-day3').innerHTML = strMaxTempDay3
  
-        let strWeatherCodeDay3 = objData.current.weather_code
+        let strWeatherCodeDay3 = objData.daily.weather_code[2]
             if([0].includes(strWeatherCodeDay3)) {
                 document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Clear Skies</p>'
@@ -137,7 +137,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeDay3)) {
                 document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeDay3)) {
@@ -157,7 +157,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempDay4 = objData.daily.temperature_2m_max[3] + '°'
         document.querySelector('#lblHigh-day4').innerHTML = strMaxTempDay4
  
-        let strWeatherCodeDay4 = objData.current.weather_code
+        let strWeatherCodeDay4 = objData.daily.weather_code[3]
             if([0].includes(strWeatherCodeDay4)) {
                 document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Clear Skies</p>'
@@ -170,7 +170,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeDay4)) {
                 document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeDay4)) {
@@ -190,7 +190,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempDay5 = objData.daily.temperature_2m_max[4] + '°'
         document.querySelector('#lblHigh-day5').innerHTML = strMaxTempDay5
  
-        let strWeatherCodeDay5 = objData.current.weather_code
+        let strWeatherCodeDay5 = objData.daily.weather_code[4]
             if([0].includes(strWeatherCodeDay5)) {
                 document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Clear Skies</p>'
@@ -203,7 +203,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeDay5)) {
                 document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeDay5)) {
@@ -223,7 +223,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempDay6 = objData.daily.temperature_2m_max[5] + '°'
         document.querySelector('#lblHigh-day6').innerHTML = strMaxTempDay6
  
-        let strWeatherCodeDay6 = objData.current.weather_code
+        let strWeatherCodeDay6 = objData.daily.weather_code[5]
             if([0].includes(strWeatherCodeDay6)) {
                 document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Clear Skies</p>'
@@ -236,7 +236,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeDay6)) {
                 document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeDay6)) {
@@ -256,7 +256,7 @@ async function getWeatherData(strLat, strLong){
         let strMaxTempDay7 = objData.daily.temperature_2m_max[6] + '°'
         document.querySelector('#lblHigh-day7').innerHTML = strMaxTempDay7
  
-        let strWeatherCodeDay7 = objData.current.weather_code
+        let strWeatherCodeDay7 = objData.daily.weather_code[6]
             if([0].includes(strWeatherCodeDay7)) {
                 document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-brightness-high"></i>'
                 document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Clear Skies</p>'
@@ -269,7 +269,7 @@ async function getWeatherData(strLat, strLong){
  
             if([51,53,55].includes(strWeatherCodeDay7)) {
                 document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
-                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Drizzle</p>'
+                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Light Rain</p>'
             }
  
             if([61,63,65].includes(strWeatherCodeDay7)) {
@@ -281,6 +281,18 @@ async function getWeatherData(strLat, strLong){
                 document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
                 document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Thunderstorms</p>'
             }
+
+        let strHumidity = objData.current.relative_humidity_2m + '% Humidity'
+        document.querySelector('#txtHumidityPct').innerHTML = strHumidity
+
+        let strWindSpeed = objData.current.wind_speed_10m + 'mph'
+        document.querySelector('#txtWindMPH').innerHTML = strWindSpeed
+
+        let strWindGusts = objData.current.wind_gusts_10m + 'mph'
+        document.querySelector('#txtWindGust').innerHTML = strWindGusts
+
+        let strWindDirection = objData.current.wind_direction_10m + '°'
+        document.querySelector('#txtDirection').innerHTML = strWindDirection
     }
 }
  
