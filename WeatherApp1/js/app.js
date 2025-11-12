@@ -51,9 +51,7 @@ async function getWeatherData(strLat, strLong){
                 document.querySelector('#txtDescription').innerHTML = '<p id="txtDescription" class="fw-bold">Thunderstorms</p>'
             }
 
-        //TODAY
-        document.querySelector('#lblCurrentTemp-today').innerHTML = objData.current.temperature_2m + '°'
- 
+        //TODAY Card
         let strMinTempToday = objData.daily.temperature_2m_min[0] + '°'
         document.querySelector('#lblLow-today').innerHTML = strMinTempToday
  
@@ -84,6 +82,204 @@ async function getWeatherData(strLat, strLong){
             if([95].includes(strWeatherCodeToday)) {
                 document.querySelector('#lblIcon-today').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
                 document.querySelector('#txtDescription-today').innerHTML = '<p id="txtDescription-today" class="fw-bold">Thunderstorms</p>'
+            }
+        
+        //Tomorrow Card
+        let strMinTempTomorrow = objData.daily.temperature_2m_min[1] + '°'
+        document.querySelector('#lblLow-tomorrow').innerHTML = strMinTempTomorrow
+ 
+        let strMaxTempTomorrow = objData.daily.temperature_2m_max[1] + '°'
+        document.querySelector('#lblHigh-tomorrow').innerHTML = strMaxTempTomorrow
+ 
+        let strWeatherCodeTomorrow = objData.current.weather_code
+            if([0].includes(strWeatherCodeTomorrow)) {
+                document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-brightness-high"></i>'
+                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Clear Skies</p>'
+            }
+ 
+            if([1,2,3].includes(strWeatherCodeTomorrow)) {
+                document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-cloud-sun"></i>'
+                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Partly Cloudy</p>'
+            }
+ 
+            if([51,53,55].includes(strWeatherCodeTomorrow)) {
+                document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
+                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Drizzle</p>'
+            }
+ 
+            if([61,63,65].includes(strWeatherCodeTomorrow)) {
+                document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-cloud-rain-heavy"></i>'
+                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Rain</p>'
+            }
+ 
+            if([95].includes(strWeatherCodeTomorrow)) {
+                document.querySelector('#lblIcon-tomorrow').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
+                document.querySelector('#txtDescription-tomorrow').innerHTML = '<p id="txtDescription-tomorrow" class="fw-bold">Thunderstorms</p>'
+            }
+        
+        //Day 3 Card
+        let strMinTempDay3 = objData.daily.temperature_2m_min[2] + '°'
+        document.querySelector('#lblLow-day3').innerHTML = strMinTempDay3
+ 
+        let strMaxTempDay3 = objData.daily.temperature_2m_max[2] + '°'
+        document.querySelector('#lblHigh-day3').innerHTML = strMaxTempDay3
+ 
+        let strWeatherCodeDay3 = objData.current.weather_code
+            if([0].includes(strWeatherCodeDay3)) {
+                document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-brightness-high"></i>'
+                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Clear Skies</p>'
+            }
+ 
+            if([1,2,3].includes(strWeatherCodeDay3)) {
+                document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-cloud-sun"></i>'
+                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Partly Cloudy</p>'
+            }
+ 
+            if([51,53,55].includes(strWeatherCodeDay3)) {
+                document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
+                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Drizzle</p>'
+            }
+ 
+            if([61,63,65].includes(strWeatherCodeDay3)) {
+                document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-cloud-rain-heavy"></i>'
+                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Rain</p>'
+            }
+ 
+            if([95].includes(strWeatherCodeDay3)) {
+                document.querySelector('#lblIcon-day3').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
+                document.querySelector('#txtDescription-day3').innerHTML = '<p id="txtDescription-day3" class="fw-bold">Thunderstorms</p>'
+            }
+        
+        //Day 4 Card
+        let strMinTempDay4 = objData.daily.temperature_2m_min[3] + '°'
+        document.querySelector('#lblLow-day4').innerHTML = strMinTempDay4
+ 
+        let strMaxTempDay4 = objData.daily.temperature_2m_max[3] + '°'
+        document.querySelector('#lblHigh-day4').innerHTML = strMaxTempDay4
+ 
+        let strWeatherCodeDay4 = objData.current.weather_code
+            if([0].includes(strWeatherCodeDay4)) {
+                document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-brightness-high"></i>'
+                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Clear Skies</p>'
+            }
+ 
+            if([1,2,3].includes(strWeatherCodeDay4)) {
+                document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-cloud-sun"></i>'
+                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Partly Cloudy</p>'
+            }
+ 
+            if([51,53,55].includes(strWeatherCodeDay4)) {
+                document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
+                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Drizzle</p>'
+            }
+ 
+            if([61,63,65].includes(strWeatherCodeDay4)) {
+                document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-cloud-rain-heavy"></i>'
+                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Rain</p>'
+            }
+ 
+            if([95].includes(strWeatherCodeDay4)) {
+                document.querySelector('#lblIcon-day4').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
+                document.querySelector('#txtDescription-day4').innerHTML = '<p id="txtDescription-day4" class="fw-bold">Thunderstorms</p>'
+            }
+
+        //Day 5 Card
+        let strMinTempDay5 = objData.daily.temperature_2m_min[4] + '°'
+        document.querySelector('#lblLow-day5').innerHTML = strMinTempDay5
+ 
+        let strMaxTempDay5 = objData.daily.temperature_2m_max[4] + '°'
+        document.querySelector('#lblHigh-day5').innerHTML = strMaxTempDay5
+ 
+        let strWeatherCodeDay5 = objData.current.weather_code
+            if([0].includes(strWeatherCodeDay5)) {
+                document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-brightness-high"></i>'
+                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Clear Skies</p>'
+            }
+ 
+            if([1,2,3].includes(strWeatherCodeDay5)) {
+                document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-cloud-sun"></i>'
+                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Partly Cloudy</p>'
+            }
+ 
+            if([51,53,55].includes(strWeatherCodeDay5)) {
+                document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
+                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Drizzle</p>'
+            }
+ 
+            if([61,63,65].includes(strWeatherCodeDay5)) {
+                document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-cloud-rain-heavy"></i>'
+                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Rain</p>'
+            }
+ 
+            if([95].includes(strWeatherCodeDay5)) {
+                document.querySelector('#lblIcon-day5').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
+                document.querySelector('#txtDescription-day5').innerHTML = '<p id="txtDescription-day5" class="fw-bold">Thunderstorms</p>'
+            }
+
+        //Day 6 Card
+        let strMinTempDay6 = objData.daily.temperature_2m_min[5] + '°'
+        document.querySelector('#lblLow-day6').innerHTML = strMinTempDay6
+ 
+        let strMaxTempDay6 = objData.daily.temperature_2m_max[5] + '°'
+        document.querySelector('#lblHigh-day6').innerHTML = strMaxTempDay6
+ 
+        let strWeatherCodeDay6 = objData.current.weather_code
+            if([0].includes(strWeatherCodeDay6)) {
+                document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-brightness-high"></i>'
+                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Clear Skies</p>'
+            }
+ 
+            if([1,2,3].includes(strWeatherCodeDay6)) {
+                document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-cloud-sun"></i>'
+                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Partly Cloudy</p>'
+            }
+ 
+            if([51,53,55].includes(strWeatherCodeDay6)) {
+                document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
+                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Drizzle</p>'
+            }
+ 
+            if([61,63,65].includes(strWeatherCodeDay6)) {
+                document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-cloud-rain-heavy"></i>'
+                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Rain</p>'
+            }
+ 
+            if([95].includes(strWeatherCodeDay6)) {
+                document.querySelector('#lblIcon-day6').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
+                document.querySelector('#txtDescription-day6').innerHTML = '<p id="txtDescription-day6" class="fw-bold">Thunderstorms</p>'
+            }
+
+        //Day 7 Card
+        let strMinTempDay7 = objData.daily.temperature_2m_min[6] + '°'
+        document.querySelector('#lblLow-day7').innerHTML = strMinTempDay7
+ 
+        let strMaxTempDay7 = objData.daily.temperature_2m_max[6] + '°'
+        document.querySelector('#lblHigh-day7').innerHTML = strMaxTempDay7
+ 
+        let strWeatherCodeDay7 = objData.current.weather_code
+            if([0].includes(strWeatherCodeDay7)) {
+                document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-brightness-high"></i>'
+                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Clear Skies</p>'
+            }
+ 
+            if([1,2,3].includes(strWeatherCodeDay7)) {
+                document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-cloud-sun"></i>'
+                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Partly Cloudy</p>'
+            }
+ 
+            if([51,53,55].includes(strWeatherCodeDay7)) {
+                document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-cloud-drizzle"></i>'
+                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Drizzle</p>'
+            }
+ 
+            if([61,63,65].includes(strWeatherCodeDay7)) {
+                document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-cloud-rain-heavy"></i>'
+                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Rain</p>'
+            }
+ 
+            if([95].includes(strWeatherCodeDay7)) {
+                document.querySelector('#lblIcon-day7').innerHTML = '<i class="bi bi-cloud-lightning-rain"></i>'
+                document.querySelector('#txtDescription-day7').innerHTML = '<p id="txtDescription-day7" class="fw-bold">Thunderstorms</p>'
             }
     }
 }
